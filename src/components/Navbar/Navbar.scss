@@ -1,0 +1,28 @@
+@use '/src/scss/mixins';
+
+nav {
+  width: 100%;
+  background-color: #2a3e36;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  border-bottom: 8px solid #daa520;
+
+  @include mixins.desktop {
+    justify-content: flex-end;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    @include mixins.desktop {
+      padding-right: 50px;
+    }
+    li {
+      margin: 10px;
+    }
+  }
+}

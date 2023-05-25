@@ -1,0 +1,76 @@
+@use '/src/scss/mixins';
+
+.currentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  .currentAnimalBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    width: 70%;
+    border-radius: 50px;
+    border: 8px solid #daa520;
+    color: #2a3e36;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+
+    @include mixins.desktop {
+      width: 40%;
+    }
+
+    &__name {
+      font-size: 2rem;
+      margin: 5px 0;
+    }
+
+    &__warning {
+      border: 3px solid red;
+      border-radius: 15px;
+      padding: 5px;
+      font-size: 1.2rem;
+      margin: 5px 0px;
+    }
+
+    &__img {
+      width: 250px;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+        object-position: top;
+      }
+    }
+    &__bYear,
+    &__meds {
+      width: 90%;
+      background-color: #2a3e36;
+      padding: 8px;
+      color: white;
+      border-radius: 15px;
+      text-align: center;
+      margin: 8px 0;
+
+      @include mixins.desktop {
+        width: 30%;
+      }
+    }
+
+    &__longDesc {
+      padding: 0px 20px;
+    }
+  }
+  .currentAnimalBox.fed {
+    background-color: rgb(132, 213, 132);
+  }
+}
